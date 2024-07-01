@@ -1,0 +1,489 @@
+{{#if mode}}
+<div class="game">
+    <div class="info-players">
+        <h3 class="title title__info">Игроки</h3>
+
+        <div class="list-player">
+            <div class="player">
+                <div id="player__img1" class="player__img">
+                    <img src="/assets/img/Union.svg" alt="Cross">
+                </div>
+                <div class="info player__info">
+                    <p id="player__name1" class="info__name">{{user2}}</p>
+                    {{#if mode}}
+                    {{else}}
+                    <p class="info__victory">63% побед</p>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="player">
+                <div id="player__img2" class="player__img">
+                    <img src="/assets/img/zero.svg" alt="Zero">
+                </div>
+                <div class="info player__info">
+                    <p id="player__name2" class="info__name">{{user1}}</p>
+                    {{#if mode}}
+                    {{else}}
+                    <p class="info__victory">63% побед</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="field">
+        <div id="stopwatch" class="timer">
+            00:00
+        </div>
+        <div class="playing-field">
+            <div class="field-column">
+                <div class="tail onmouseover=" hoverTaile(this);" "></div>
+                <div class=" tail onmouseover="hoverTaile(this);" "></div>
+                <div class=" tail onmouseover="hoverTaile(this);""></div>
+            </div>
+            <div class=" field-column">
+                    <div class="tail"></div>
+                    <div class="tail"></div>
+                    <div class="tail"></div>
+                </div>
+                <div class="field-column">
+                    <div class="tail"></div>
+                    <div class="tail"></div>
+                    <div class="tail"></div>
+                </div>
+            </div>
+            <div class="status">
+                <p>Ходит:</p>
+                <div class="status-img">
+                    <img src="/assets/img/Union.svg" alt="Cross">
+                </div>
+                <p class="status__p">{{#if choice}}{{user1}}{{else}}{{user2}}{{/if}}</p>
+            </div>
+        </div>
+        {{else}}
+
+
+
+
+
+        {{!-- fghfghfghfgh --}}
+
+
+
+
+
+        <div class="game">
+            <div class="info-players">
+                <h3 class="title title__info">Игроки</h3>
+                {{#if choice}}
+                <div class="list-player">
+                    <div class="player">
+                        <div id="player__img1" class="player__img">
+                            <img src="/assets/img/Union.svg" alt="Cross">
+                        </div>
+                        <div class="info player__info">
+                            <p id="player__name1" class="info__name">{{user1}}</p>
+                            {{#if mode}}
+                            {{else}}
+                            <p class="info__victory">63% побед</p>
+                            {{/if}}
+
+                        </div>
+                    </div>
+                    <div class="player">
+                        <div id="player__img2" class="player__img">
+                            <img src="/assets/img/zero.svg" alt="Zero">
+                        </div>
+                        <div class="info player__info">
+                            <p id="player__name2" class="info__name">{{user2}}</p>
+                            {{#if mode}}
+                            {{else}}
+                            <p class="info__victory">63% побед</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+                {{else}}
+                <div class="list-player">
+                    <div class="player">
+                        <div id="player__img1" class="player__img">
+                            <img src="/assets/img/Union.svg" alt="Cross">
+                        </div>
+                        <div class="info player__info">
+                            <p id="player__name1" class="info__name">{{user2}}</p>
+                            {{#if mode}}
+                            {{else}}
+                            <p class="info__victory">63% побед</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                    <div class="player">
+                        <div id="player__img2" class="player__img">
+                            <img src="/assets/img/zero.svg" alt="Zero">
+                        </div>
+                        <div class="info player__info">
+                            <p id="player__name2" class="info__name">{{user1}}</p>
+                            {{#if mode}}
+                            {{else}}
+                            <p class="info__victory">63% побед</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+            <div class="field">
+                <div id="stopwatch" class="timer">
+                    00:00
+                </div>
+                <div class="playing-field">
+                    <div class="field-column">
+                        <div class="tail onmouseover=" hoverTaile(this);" onmouseout="unhoverTaile(this)""></div>
+                <div class=" tail onmouseover="hoverTaile(this);" onmouseout="unhoverTaile(this)""></div>
+                <div class=" tail onmouseover="hoverTaile(this);" onmouseout="unhoverTaile(this)""></div>
+            </div>
+            <div class=" field-column">
+                            <div class="tail"></div>
+                            <div class="tail"></div>
+                            <div class="tail"></div>
+                        </div>
+                        <div class="field-column">
+                            <div class="tail"></div>
+                            <div class="tail"></div>
+                            <div class="tail"></div>
+                        </div>
+                    </div>
+                    <div class="status">
+                        <p>Ходит:</p>
+                        <div class="status-img">
+                            <img src="/assets/img/Union.svg" alt="Cross">
+                        </div>
+                        <p class="status__p">{{#if choice}}{{user1}}{{else}}{{user2}}{{/if}}</p>
+                    </div>
+                </div>
+                {{/if}}
+
+
+
+
+
+
+                <div class="chat">
+                    {{#if mode}}
+                    <div class="messages">
+                        <div class="message message__incoming">
+                            <div class="message__info">
+                                <p class="title message__title">Плюшкина Екатерина</p>
+                                <p class="message__time">13:40</p>
+                            </div>
+                            <p>Ну что, готовься к поражению!</p>
+                        </div>
+                        <div class="message message__outgoing">
+                            <div class="message__info">
+                                <p class="title message__title">Плюшкина Екатерина</p>
+                                <p class="message__time">13:40</p>
+                            </div>
+                            <p>Ну что, готовься к поражению!</p>
+                        </div>
+                    </div>
+                    <div class="form message__form">
+                        <input class="input" id="message" type="text" name="message" placeholder="Сообщение..."
+                            maxlength="25">
+                        <button class="input" type="submit" onclick="sendMessages()"><img src="assets/img/primary.svg"
+                                alt="btn"></button>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+            <div id="popup" class="popup">
+                <div class="popup__img">
+                    <img src="/assets/img/cup.png" alt="Кубок">
+                </div>
+                <p class="popup__winner">Это содержимое popup окна.</p>
+                <div class="popup__btn">
+                    <button id="new-game" class="btn">Новая игра</button>
+                    <button id="exit" class="btn btn__white">Выйти</button>
+                </div>
+            </div>
+            <div id="overlay" class="overlay"></div>
+
+
+
+
+            {{#if mode}}
+            <script src="/socket.io/socket.io.js"></script>
+            <script>
+                var socket = io();
+                let x = true
+
+                let data = {
+                    "userName": document.getElementById('player__name2').textContent,
+
+                }
+
+                socket.emit('id player connect', data);
+
+                socket.on('id player connect', function (msg) {
+                    if (msg != document.getElementById('player__name2').textContent && x) {
+                        x = false
+                        socket.emit('id player connect', data);
+                        var link = window.location.href
+                        var linkCount = link.length
+                        console.log(msg)
+                        if (link[32]) {
+                            document.getElementById('player__name2').textContent = msg
+                            document.getElementById('player__name1').textContent = data['userName']
+                        }
+                        else {
+                            document.getElementById('player__name1').textContent = msg
+                            document.getElementById('player__name2').textContent = data['userName']
+                        }
+                    }
+
+                });
+
+                /*CHat*/
+                function sendMessages() {
+                    let mes = document.getElementById('message').textContent;
+                    socket.emit('chatMessage', mes);
+
+                }
+                socket.on('chatMessage', function (msg) {
+                    var item = document.createElement('p').classList.add('message');
+                    item.textContent = msg;
+                    document.querySelector('.message__form').appendChild(item);
+
+                })
+
+                /*ddfgfdg*/
+
+
+
+
+                var startTime = Date.now();
+                var running = 1;
+                let field = document.querySelectorAll('.tail')
+                let count = 1;
+                var board = [
+                    0, //tail 0
+                    0, //tail 1
+                    0, //tail 2
+                    0, //tail 3
+                    0, //tail 4
+                    0, //tail 5
+                    0, //tail 6
+                    0, //tail 7
+                    0  //tail 8
+                ];
+                let _host = (window.location.href)[32] ? true : false;
+
+                /*Изменение стилей при игре оффлайн */
+                document.querySelector('.info-players').style.height = '170px';
+                document.querySelector('.list-player').style.gap = '30px';
+                /*Запуск новой игры */
+                document.getElementById('new-game').addEventListener('click', () => {
+
+                    socket.emit('reload', 'reload');
+
+                    location.reload();
+                })
+                socket.on('reload', function (msg) {
+
+                    location.reload();
+
+                })
+                document.getElementById('exit').addEventListener('click', () => {
+                    socket.emit('exit', 'exit');
+                    window.location.href = "http://localhost:3000";
+                })
+                socket.on('exit', function (msg) {
+
+                    window.location.href = "http://localhost:3000";
+
+                })
+                socket.on('count step', function (msg) {
+                    count = msg['count'];
+                    if (msg['tail'] == 'tail-cross' && !_host) {
+                        tailCross(msg['index'])
+                    }
+                    else if (msg['tail'] == 'tail-zero' && _host) {
+                        tailZero(msg['index'])
+                    }
+                    checkWinner();
+
+                })
+                /*Игровое поле */
+                for (let index = 0; index < field.length; index++) {
+                    field[index].addEventListener('click', () => {
+                        if (field[index].classList.contains('tail-cross') || field[index].classList.contains('tail-zero')) {
+                        }
+                        else {
+                            if (count == 1 && _host) {
+                                tailCross(index);
+                                let dataBoard = {
+                                    "count": count,
+                                    "index": index,
+                                    "tail": "tail-cross"
+                                }
+                                socket.emit('count step', dataBoard);
+                            }
+                            else if (count == 2 && !_host) {
+                                tailZero(index);
+                                let dataBoard1 = {
+                                    "count": count,
+                                    "index": index,
+                                    "tail": "tail-zero"
+                                }
+                                socket.emit('count step', dataBoard1);
+                            }
+                        }
+
+                        checkWinner();
+                    })
+                }
+
+
+                function checkWinner() {
+                    /*Проверка на победу */
+                    if (checkWin(board) == 1) {
+                        pauseStopwatch();
+                        document.querySelector('.popup').style.display = 'flex';
+                        document.querySelector('.overlay').style.display = 'block';
+                        document.querySelector('.popup__winner').textContent = document.getElementById('player__name1').textContent + " Победил!";
+
+                    }
+                    else if (checkWin(board) == 2) {
+                        pauseStopwatch()
+                        document.querySelector('.popup').style.display = 'flex';
+                        document.querySelector('.overlay').style.display = 'block';
+                        document.querySelector('.popup__winner').textContent = document.getElementById('player__name2').textContent + " Победил!";
+
+                    }
+                    else if (checkWin(board) == 3) {
+                        pauseStopwatch()
+                        document.querySelector('.popup').style.display = 'flex';
+                        document.querySelector('.overlay').style.display = 'block';
+                        document.querySelector('.popup__winner').textContent = "Ничья";
+                    }
+                }
+
+                function tailCross(index) {
+                    field[index].classList.add('tail-cross')
+                    count = 2;
+                    board[index] = '1';
+                    if (checkWin(board) == 1 || checkWin(board) == 2 || checkWin(board) == 3) {
+                    }
+                    else {
+                        document.querySelector('.status__p').textContent = document.getElementById("player__name2").textContent;
+                        document.querySelector('.status-img img').src = '/assets/img/Zero.svg'
+                    }
+                }
+                function tailZero(index) {
+                    console.log("innerzero")
+                    field[index].classList.add('tail-zero')
+                    count = 1;
+                    board[index] = '2';
+                    if (checkWin(board) == 1 || checkWin(board) == 2 || checkWin(board) == 3) {
+                    }
+                    else {
+                        document.querySelector('.status__p').textContent = document.getElementById("player__name1").textContent;
+                        document.querySelector('.status-img img').src = '/assets/img/Union.svg'
+                    }
+                }
+                /*Функция проверки игрового поля */
+                function checkWin(board) {
+                    // Проверка горизонталей и вертикалей
+                    for (var i = 0; i < 3; i++) {
+                        var row = i * 3;
+                        if (board[row] === board[row + 1] && board[row + 1] === board[row + 2] && board[row] !== 0) {
+                            if (field[row].classList.contains('tail-cross') && field[row + 1].classList.contains('tail-cross') && field[row + 2].classList.contains('tail-cross')) {
+                                field[row].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                                field[row + 1].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                                field[row + 2].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                            }
+                            else if (field[row].classList.contains('tail-zero') && field[row + 1].classList.contains('tail-zero') && field[row + 2].classList.contains('tail-zero')) {
+                                field[row].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                                field[row + 1].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                                field[row + 2].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                            }
+                            return board[row];
+                        }
+                        if (board[i] === board[i + 3] && board[i + 3] === board[i + 6] && board[i] !== 0) {
+                            if (field[i].classList.contains('tail-cross') && field[i + 3].classList.contains('tail-cross') && field[i + 6].classList.contains('tail-cross')) {
+                                field[i].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                                field[i + 3].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                                field[i + 6].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                            }
+                            else if (field[i].classList.contains('tail-zero') && field[i + 3].classList.contains('tail-zero') && field[i + 6].classList.contains('tail-zero')) {
+                                field[i].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                                field[i + 3].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                                field[i + 6].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                            }
+                            return board[i];
+                        }
+                    }
+                    // Проверка диагоналей
+                    if (board[0] === board[4] && board[4] === board[8] && board[0] !== 0) {
+                        if (field[0].classList.contains('tail-cross') && field[4].classList.contains('tail-cross') && field[8].classList.contains('tail-cross')) {
+                            field[0].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                            field[4].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                            field[8].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                        }
+                        else if (field[0].classList.contains('tail-zero') && field[4].classList.contains('tail-zero') && field[8].classList.contains('tail-zero')) {
+                            field[0].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                            field[4].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                            field[8].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                        }
+                        return board[0];
+                    }
+                    if (board[2] === board[4] && board[4] === board[6] && board[2] !== 0) {
+                        if (field[2].classList.contains('tail-cross') && field[4].classList.contains('tail-cross') && field[6].classList.contains('tail-cross')) {
+                            field[2].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                            field[4].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                            field[6].style.backgroundImage = "url(/assets/img/crossWin.svg)"
+                        }
+                        else if (field[2].classList.contains('tail-zero') && field[4].classList.contains('tail-zero') && field[6].classList.contains('tail-zero')) {
+                            field[2].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                            field[4].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                            field[6].style.backgroundImage = "url(/assets/img/zeroWin.svg)"
+                        }
+
+                        return board[2];
+                    }
+
+                    // Проверка на ничью
+                    if (!board.includes(0)) {
+                        return 3;
+                    }
+                }
+
+
+
+                /*Функции таймера */
+                function pauseStopwatch() {
+                    running = 0;
+                }
+                function updateStopwatch() {
+                    if (running) {
+                        var currentTime = Date.now() - startTime;
+                        var hours = Math.floor(currentTime / 3600000);
+                        var minutes = Math.floor((currentTime % 3600000) / 60000);
+                        var seconds = Math.floor((currentTime % 60000) / 1000);
+
+                        hours = (hours < 10) ? "0" + hours : hours;
+                        minutes = (minutes < 10) ? "0" + minutes : minutes;
+                        seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+                        document.getElementById('stopwatch').innerHTML = minutes + ':' + seconds;
+                    }
+                }
+
+                setInterval(updateStopwatch, 1000);
+
+
+                /*ddfgfdg*/
+            </script>
+
+            {{else}}
+            <script src="/gameOffline.js"></script>
+            {{/if}}

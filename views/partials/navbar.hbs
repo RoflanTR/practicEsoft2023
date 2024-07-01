@@ -1,0 +1,45 @@
+<div class="header">
+    <a href="/">
+        <div class="logo">
+            <img src="/assets/img/logo.svg" alt="logo">
+        </div>
+    </a>
+    <div class="menu">
+        {{#if isHome}}<a href="/">
+            <p class="menu__items menu_items_active">Игровое поле</p>
+        </a>
+        {{else}}<a href="/">
+            <p class="menu__items">Игровое поле</p>
+        </a>{{/if}}
+        {{#if isRaite}}<a href="/">
+            <p class="menu__items menu_items_active">Рейтинг</p>
+        </a>
+        {{else}}<a href="/">
+            <p class="menu__items">Рейтинг</p>
+        </a>{{/if}}
+        {{#if isActivePlayer}}<a href="/activePlayers">
+            <p class="menu__items menu_items_active">Активные игроки</p>
+        </a>
+        {{else}}<a href="/activePlayers">
+            <p class="menu__items">Активные игроки</p>
+        </a>{{/if}}
+        {{#if isHistory}}<a href="/history">
+            <p class="menu__items menu_items_active">История игр</p>
+        </a>
+        {{else}}<a href="/history">
+            <p class="menu__items">История игр</p>
+        </a>{{/if}}
+        {{#if isList}}<a href="/">
+            <p class="menu__items menu_items_active">Список игроков</p>
+        </a>
+        {{else}}<a href="/">
+            <p class="menu__items">Список игроков</p>
+        </a>{{/if}}
+    </div>
+    <div class="logout">
+        <form class="form navbar__form" action="/logout" method="post">
+            <button class="navbar__btn" type="submit"><img id="navbar__img" src="/assets/img/logout.svg" alt=""
+                    onmouseover="hover(this);" onmouseout="unhover(this)"></button>
+        </form>
+    </div>
+</div>

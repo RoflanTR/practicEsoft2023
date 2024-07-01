@@ -1,0 +1,26 @@
+<div class="auth">
+    <div class="auth__img">
+        <img src="/assets/img/dog.png" alt="">
+    </div>
+    <h3 class="auth__title">Войдите в игру</h3>
+    <form class="form auth__form" action="/auth" method="post">
+        {{#if fail}}
+        <input class="input  auth__input" type="text" name="login" placeholder="Логин" maxlength="15" onkeyup="checkFilledfirst(this)" required>
+        <p class="auth__error ">Неверный логин</p>
+        <input class="input auth__input" type="password" name="pass" placeholder="Пароль" maxlength="15" onkeyup="checkFilledsecond(this)" required>
+        <p class="auth__error ">Неверный пароль</p>
+        <div>
+            <button class="btn auth__btn" type="submit" disabled ="true">Войти</button>
+        </div>
+
+        {{else}}
+        <input class="input  auth__input" type="text" name="login" placeholder="Логин" maxlength="15"  onkeyup="checkFilledfirst(this)" required>
+        <p class="auth__error hidden">Неверный логин</p>
+        <input class="input auth__input" type="password" name="pass" placeholder="Пароль"   maxlength="15" onkeyup="checkFilledsecond(this)" required>
+        <p class="auth__error hidden">Неверный пароль</p>
+        <div>
+            <button class="btn auth__btn" type="submit" disabled ="true">Войти</button>
+        </div>
+        {{/if}}
+    </form>
+</div>

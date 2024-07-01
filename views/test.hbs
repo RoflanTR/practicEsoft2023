@@ -1,0 +1,36 @@
+<div class="active-players">
+    <h3 class="title active-players__title">История игр</h3>
+
+    <form action="/playOnline" method="get">
+        <table class="active-players__table">
+            {{#each listPlayers}}
+            <tr>
+                <th class="name__table">{{name}}</th>
+                <th class="status__table status__table_free"> Свободен</th>
+                <th> <button id="{{idx}}" onclick="func({{idx}})" type="submit" class="btn btn__send_active">Позвать
+                        игрока</button></th>
+            </tr>
+            {{/each}}
+            <input class="hiddenId" id="{{userId}}" type="hidden">
+        </table>
+    </form>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io();
+    function func(id) {
+
+        socket.emit('id player invite', id);
+
+    }
+    socket.on('id player invite', function (msg) {
+        if (msg == document.querySelector(".hiddenId").id) {
+            window.location.href = "http://localhost:3000/playOnline";
+        }
+
+    });
+
+
+
+
+</script>
